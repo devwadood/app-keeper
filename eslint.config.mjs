@@ -12,5 +12,6 @@ export default defineConfig([
     'coverage/**',
     'playwright-report/**',
     'src/payload-types.ts',
+    'src/migrations/**',
   ]),
 ])

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
-import './globals.css'
 import { clientEnv } from '@/lib/env/client'
+import '../globals.css'
 
 export const metadata: Metadata = {
   title: {
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description: 'Profitability intelligence for Android app portfolios.',
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function MarketingLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>{children}</body>
     </html>
   )
