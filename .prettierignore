@@ -1,0 +1,6 @@
+.next
+node_modules
+.pnpm-store
+CODEX_MASTER_BUILD_PROMPT.md
+APPLEDGER_ENV_SETUP_GUIDE.md
+src/payload-types.ts

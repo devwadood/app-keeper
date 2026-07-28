@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f7f8fa;
+  --panel: #ffffff;
+  --panel-subtle: #fafafa;
+  --foreground: #18181b;
+  --muted: #71717a;
+  --border: #e4e4e7;
+  --accent: #5b5ce2;
+  --accent-soft: #eeefff;
+  --success: #138a5b;
+  --success-soft: #eaf8f2;
+  --danger: #ca3c4d;
+  --danger-soft: #fff0f1;
+  --warning: #b86b09;
+  --warning-soft: #fff7e8;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0d0e12;
+  --panel: #14151a;
+  --panel-subtle: #191a20;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --border: #292a31;
+  --accent: #8585ff;
+  --accent-soft: #22233d;
+  --success: #49c895;
+  --success-soft: #163328;
+  --danger: #ff7c88;
+  --danger-soft: #3b1e24;
+  --warning: #f4b95f;
+  --warning-soft: #382b17;
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+input,
+select {
+  outline-color: var(--accent);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.025);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent), transparent 75%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
